@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><!-- Metadaten und eingebundene Stylesheets -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detaildarstellung</title>
+    <link rel="stylesheet" href="allgemein/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="allgemein/css/burgermenu.css">
+    <link rel="stylesheet" href="allgemein/css/footer.css">
+    <link rel="stylesheet" href="allgemein/css/mediaqdetail.css">
+</head>
+
+<body>
+    <header>
+        <!-- Der Header-Bereich der Webseite enthält das Logo, ein ToggleMenü, und den Menü-Links, die zu den Pop Ups führen. -->
+        <div><img src="allgemein/img/logo.png" class="logo" /></div>
+        <button id="toggleMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <div class="menu-links">
+            <ul> <!-- Funktion für die Pop-Ups -->
+                <li><a class="menu-link" href="#" onclick="zeigeEntwicklerPopup()">Entwickler</a></li>
+                <li><a class="menu-link" href="#" onclick="zeigeAnfahrtPopup()">Anfahrt</a></li>
+                <li><a class="menu-link" href="#" onclick="zeigePopup()">Support</a></li>
+                <li><a class="menu-link" href="#" onclick="zeigeSocialMediaPopup()">Social Media</a></li>
+            </ul>
+        </div>
+    </header>
+    <main> <!-- Anfahrt-Popup -->
+        <div id="anfahrt-popup" class="popup">
+            <div class="popup-inhalt3">
+                <span class="schließen" onclick="schließeAnfahrtPopup()">&times;</span>
+                <div class="ka">
+                </div>
+                <iframe class="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.1726376838683!2d8.382865077500837!3d49.02632348887248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47970706c04191d7%3A0x625d232c4ae77fc2!2sDHBW%20Karlsruhe!5e0!3m2!1sde!2sde!4v1696083695152!5m2!1sde!2sde"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div><!-- Entwickler-Popup -->
+        <div id="entwickler-popup" class="popup">
+            <div class="popup-inhalt">
+                <span class="schließen" onclick="schließeEntwicklerPopup()">&times;</span>
+                <img class="Entwickler" src="allgemein/img/WebseitenBild.jpg">
+                <ul>
+                    <li>Name: Jan Thome</li>
+                    <li>Kurs: WWI22B5</li>
+                    <li>Semester: 3</li>
+                    <li>Hobbys: Fußball, Schach</li>
+                </ul>
+            </div>
+        </div><!-- Kontakt-Popup -->
+        <div id="kontakt-popup" class="popup">
+            <div class="popup-inhalt">
+                <span class="schließen" onclick="schließePopup()">&times;</span>
+                <p>Rufe uns hier an &phone;</p>
+                <br>
+                <p><a href="tel:+49 174 92896446">+49 174 9289646</a></p>
+            </div>
+        </div><!-- Social Media-Popup -->
+        <div id="social-media-popup" class="popup">
+            <div class="popup-inhalt2">
+                <span class="schließen" onclick="schließeSocialMediaPopup()">&times;</span>
+                <h3>Folge uns auf Social Media:</h3>
+                <br>
+                <a href="http://www.donothingfor2minutes.com/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jan-thome-7a11a124b/" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div><!-- Hier werden die Details des angezeigten Produkts dargestellt inform einer Liste -->
+        <div id="data-details">
+            <a href="website.html">&larr; Zurück zur Suche</a>
+            <div class="product-info">
+                <div class="left-info"><!-- Informationen über das Produkt -->
+                    <ul>
+                        <li>
+                            <p id="product-title">Produktname:</p>
+                        </li>
+                        <li>
+                            <p id="product-description"></p>
+                        </li>
+                        <li>
+                            <p id="product-category"></p>
+                        </li>
+                        <li>
+                            <p id="product-ratings"></p>
+                        </li>
+                        <li>
+                            <p id="product-price">Preis:</p>
+                        </li>
+                        <li>
+                            <p id="product-discount"></p>
+                        </li>
+                        <li><button class="dhbw-button"> Mit DHBW-Mail anmelden und Rabatt sichern</button></li>
+                        <!-- Button um sih mit seinem Konto anzumelden -->
+                    </ul>
+                </div>
+                <div class="right-info">
+                    <p id="product-images"></p><!-- Produktbild -->
+                    <button id="prev-button">&larr; </button><!-- Buttons um Bilder vor und zurück zu klicken -->
+                    <button id="next-button">&rarr;</button>
+                </div>
+            </div>
+        </div>
+        <div id="other-products-container">
+            <!-- Hier werden auf der Detailseite Produkte der selben Kategorie angezeigt -->
+            <h2>Andere Produkte derselben Kategorie:</h2>
+            <div id="related-products" class="product-grid"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="kontakt-container"> <!-- Footer mit Instagram, Youtube und LinkedIn Logo -->
+            <a href="http://www.donothingfor2minutes.com/" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jan-thome-7a11a124b/" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+        </div>
+    </footer>
+    <script src="allgemein/js/details.js"></script> <!-- Eingebundene JavaScript Dateien-->
+    <script src="allgemein/js/popup.js"></script><!-- Eingebundene JavaScript Dateien-->
+</body>
+</html>

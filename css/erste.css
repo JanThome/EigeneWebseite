@@ -1,0 +1,227 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+.page-content {
+    padding: 20px;
+    margin-top: 30px;
+}
+.absatz ul {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+}
+h4 b {
+    filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.9));
+}
+.horizontallist li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.horizontallist li:hover {
+    transform: scale(1.05);
+}
+.mdl-layout__header-row{
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.mdl-navigation.mdl-layout--large-screen-only .mdl-navigation__link {
+    font-size: 18px;
+}
+.mdl-navigation.mdl-layout--large-screen-only .mdl-navigation__link:hover {
+    color: rgb(0, 102, 255);
+    font-size: 16px;
+}
+.page-content h3 {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Textschatten für Kontrast */
+}
+.absatz img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px #000;
+    filter: grayscale(0%);
+}
+.absatz img:hover {
+    filter: grayscale(100%);
+
+}
+body {
+    background-image: url(background3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.weiselinie {
+    margin-bottom: 30px;
+}
+.schwarzelinie {
+    margin-bottom: 50px;
+}
+
+.absatz {
+    background-color: rgba(255, 255, 255, 0.5);  
+    color: black;
+    padding: 10px;
+    width: 60%;
+    border-radius: 15px;
+    margin: 0 auto;
+    height: 270px;
+}
+
+.absatz h4 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h5 p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.absatz h5 {
+    text-align: center;
+}
+
+.mdl-layout__content {
+    min-height: 100vh; 
+}
+
+.linie {
+    height: 2px;
+    background-color: black;
+}
+.absatz p, .abo h6 {
+    text-align: center;
+}
+.abobutton {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.abobutton:hover {
+    background-color: #248227; 
+    transform: scale(1.05); 
+}
+.email {
+    padding: 10px 20px; 
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+}
+.email:focus {
+    background-color: rgb(225, 220, 220);
+    color: black;
+}
+
+.abo {
+    width: 500px;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);  
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    color: black;
+    height: 250px;
+    margin-bottom: 30px;
+    
+}
+section p {
+    font-size: 18px;
+}
+.frage {
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+.pfeil {
+    font-size: 20px;
+    font-weight: bold;
+}
+p {
+    text-align: center;
+}
+
+.contain {
+    gap: 20px;
+    display: flex;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 20px;
+}
+.contain a {
+    color: black;
+}
+.contain a i {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
+}
+.contain a[href="https://github.com/JanThome"] i:hover { 
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
+    transform: scale(1.2);
+}
+.contain a[href="http://www.donothingfor2minutes.com/"] i:hover {
+    filter: drop-shadow(0px 0px 10px rgba(186, 26, 207, 0.9));
+    transform: scale(1.2);
+}
+.contain a[href="https://www.linkedin.com/in/jan-thome-7a11a124b/"] i:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0, 81, 255, 0.9));
+    transform: scale(1.2);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-top: 1px solid white;
+    padding: 10px;
+    font-size: 16px;
+}
+footer p {
+    font-size: 18px;
+}
+.emoji {
+    font-size: 20px;
+}
